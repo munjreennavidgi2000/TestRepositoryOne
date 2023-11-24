@@ -11,7 +11,7 @@ public class MainClass {
 		Session session = sf.openSession();
 
 		Student st = new Student();
-		st.setSid(1);
+		st.setSid(2);
 		st.setSname("qwerty");
 		session.save(st);
 		session.beginTransaction().commit();
