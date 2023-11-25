@@ -21,6 +21,7 @@ public class MainApp {
 		session.save(s);
 		session.save(s1);
 		session.beginTransaction().commit();
+		System.out.println("Data entered successfully");
 	}
 
 }
