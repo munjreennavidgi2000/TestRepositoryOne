@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id="s" class="com.setterBasedCollectionDI.Student">
+
+		<property name="sid" value="1"></property>
+		<property name="name">
+			<list>
+				<value>priyanka</value>
+				<value>Sonali</value>
+				<value>Tina</value>
+			</list>
+		</property>
+		<property name="address">
+			<set>
+				<value>pune</value>
+				<value>Mumbai</value>
+				<value>Solapur</value>
+			</set>
+		</property>
+
+		<property name="div">
+			<map>
+				<entry key="1" value="First"></entry>
+				<entry key="2" value="Second"></entry>
+				<entry key="3" value="Third"></entry>
+			</map>
+		</property>
+	</bean>
+</beans>

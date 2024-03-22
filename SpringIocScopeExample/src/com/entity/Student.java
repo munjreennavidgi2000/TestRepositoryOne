@@ -1,22 +1,15 @@
 package com.entity;
 
-import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "Student_Data")
 public class Student {
-	@Id
-	@Column(name = "Student_Id")
+
 	private int id;
-	@Column(name = "Student_Name")
-	@EmbeddedId
 	private String name;
-	@Column(name = "Student_Address")
 	private String address;
+	private Subject subject;
+	
+	public Student() {
+		System.out.println("constructor student");
+	}
 
 	public int getId() {
 		return id;
@@ -42,9 +35,17 @@ public class Student {
 		this.address = address;
 	}
 
+	public Subject getSubject() {
+		return subject;
+	}
+
+	public void setSubject(Subject subject) {
+		this.subject = subject;
+	}
+
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", name=" + name + ", address=" + address + "]";
+		return "Student [id=" + id + ", name=" + name + ", address=" + address + ", subject=" + subject + "]";
 	}
 
 }

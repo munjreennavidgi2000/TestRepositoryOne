@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id="e" class="com.constructorBased.CollectionDI.Employee">
+		<constructor-arg value="1"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>"acd"</value>
+				<value>"sde"</value>
+				<value>"sde"</value>
+			</list>
+		</constructor-arg>
+
+		<constructor-arg>
+			<set>
+				<value>"pune"</value>
+				<value>"mumbai"</value>
+				<value>"hyderabad"</value>
+			</set>
+		</constructor-arg>
+
+		<constructor-arg>
+			<map>
+				<entry key="1" value="first"></entry>
+				<entry key="2" value="second"></entry>
+				<entry key="3" value="third"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+
+	<bean id="d" class="com.constructorBased.CollectionDI.Department">
+
+	<constructor-arg value="1"></constructor-arg>
+	<constructor-arg value="dept1"></constructor-arg>
+	<constructor-arg>
+		<list>
+			<ref bean="e" />
+		</list>
+	</constructor-arg>
+	</bean>
+</beans>

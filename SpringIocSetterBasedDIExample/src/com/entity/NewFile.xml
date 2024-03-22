@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id="e" class="com.entity.Employee">
+		<property name="id" value="1"></property>
+		<property name="name" value="abc"></property>
+		<property name="salary" value="30000"></property>
+		<property name="dept" ref="d"></property>
+	</bean>
+
+
+	<bean id="d" class="com.entity.Department">
+		<property name="did" value="1"></property>
+		<property name="dname" value="Developer"></property>
+	</bean>
+</beans>
+			

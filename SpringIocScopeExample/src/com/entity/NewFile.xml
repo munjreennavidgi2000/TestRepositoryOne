@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="s" class="com.entity.Student" scope="singleton">
+		<property name="id" value="1"></property>
+		<property name="name" value="abc"></property>
+		<property name="address" value="pune"></property>
+		<property name="subject" ref="b"></property>
+		<lookup-method name="getSubject" />
+
+	</bean>
+	<bean id="b" class="com.entity.Subject" scope="prototype">
+		<property name="sid" value="1"></property>
+		<property name="sname" value="java"></property>
+	</bean>
+</beans>

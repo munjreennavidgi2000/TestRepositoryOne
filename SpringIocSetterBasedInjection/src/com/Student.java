@@ -1,21 +1,12 @@
-package com.entity;
+package com;
 
-import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "Student_Data")
 public class Student {
-	@Id
-	@Column(name = "Student_Id")
+	public Student() {
+		System.out.println("student constuctor");
+	}
+
 	private int id;
-	@Column(name = "Student_Name")
-	@EmbeddedId
 	private String name;
-	@Column(name = "Student_Address")
 	private String address;
 
 	public int getId() {

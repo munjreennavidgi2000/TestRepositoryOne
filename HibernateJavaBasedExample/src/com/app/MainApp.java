@@ -9,11 +9,9 @@ import com.util.HibernateUtil;
 public class MainApp {
 	public static void main(String[] args) {
 		SessionFactory sf = HibernateUtil.getSessionFactory();
-
 		Session session = sf.openSession();
-
 		Student s = new Student();
-		s.setId(3);
+		s.setId(1);
 		s.setName("abc");
 		s.setAddress("pune");
 		session.save(s);

@@ -1,18 +1,10 @@
 package com.entity;
 
-import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "Student_Details")
 public class Student {
-	@Id
-	@Column(name = "Std_Id")
+
 	private int sid;
 	private String sname;
+	private String address;
 
 	public int getSid() {
 		return sid;
@@ -30,9 +22,17 @@ public class Student {
 		this.sname = sname;
 	}
 
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
 	@Override
 	public String toString() {
-		return "Student [sid=" + sid + ", sname=" + sname + "]";
+		return "Student [sid=" + sid + ", sname=" + sname + ", address=" + address + "]";
 	}
 
 }

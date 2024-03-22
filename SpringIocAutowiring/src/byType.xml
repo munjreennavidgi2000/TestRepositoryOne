@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id="student" class="com.entity.Student">
+		<property name="sid" value="1"></property>
+		<property name="sname" value="abc"></property>
+		<property name="address" value="pune"></property>
+	</bean>
+	<bean id="student1" class="com.entity.Student">
+		<property name="sid" value="2"></property>
+		<property name="sname" value="pqr"></property>
+		<property name="address" value="pune"></property>
+	</bean>
+
+	<bean id="c" class="com.entity.College" autowire="byName">
+		<property name="cid" value="1"></property>
+		<property name="cname" value="ABC"></property>
+		<!-- <property name="student" ref="s"></property> -->
+	</bean>
+
+
+	<bean id="p" class="com.constructorAutowiring.Product"
+		autowire="constructor">
+		<constructor-arg value="1" index="0"></constructor-arg>
+		<constructor-arg value="top" index="1"></constructor-arg>
+	</bean>
+
+	<bean id="customer" class="com.constructorAutowiring.Customer">
+		<constructor-arg value="1" index="0"></constructor-arg>
+		<constructor-arg value="abc" index="1"></constructor-arg>
+	</bean>
+
+	<bean id="customer1" class="com.constructorAutowiring.Customer">
+		<constructor-arg value="2" index="0"></constructor-arg>
+		<constructor-arg value="lmn" index="1"></constructor-arg>
+	</bean>
+
+</beans>
