@@ -22,7 +22,7 @@ public class MainApp {
 		session.save(s1);
 		session.beginTransaction().commit();
 		System.out.println("Data entered successfully ");
-                     System.out.println("entered data successfully");
+
 	}
 
 }
